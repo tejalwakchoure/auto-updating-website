@@ -26,9 +26,7 @@ jobs:
       with:
         python-version: '3.10'
     - name: Install all necessary packages
-      run: pip install jupyter lxml pandas requests beautifulsoup4 html5lib altair
-    - name: Install latest altair
-      run: pip install altair --upgrade
+      run: pip install jupyter lxml pandas requests beautifulsoup4 html5lib altair altair_saver
     - name: Scraping today's data
       run: jupyter nbconvert --to notebook --execute "01-Scraper.ipynb" --stdout
     - name: Update our website
